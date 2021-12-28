@@ -1,0 +1,30 @@
+.Palette {
+    width: 100%;
+    max-width: 300px;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+.Palette__colors {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: var(--secondary-black);    
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.Palette__color-option {
+    flex: 0 1 11.11%;
+    cursor: pointer;
+    aspect-ratio: 1;
+}
+
+.Palette__color-option--selected {
+    width: 90%;
+    height: 35px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 999px;
+}
