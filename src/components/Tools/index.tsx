@@ -1,15 +1,21 @@
 import React from 'react';
-import './Tools.css';
+import './DisplayTools.css';
 
-interface ToolsProp {
-    children: React.ReactNode;
+interface DisplayToolsProp {
+    switchZoom: () => void;
+    switchBordersVisibility: () => void;
 }
 
-export const Tools = ({children}:ToolsProp) => {
+export const DisplayTools = ({switchZoom, switchBordersVisibility}:DisplayToolsProp) => {
     return (
-        <div className="Tools">
-            
-            {children}
+        <div className="DisplayTools">
+            <button onClick={() => switchZoom()}>
+                zoom
+            </button>
+            <button onClick={() => switchBordersVisibility()}>
+                borders
+            </button>
+            {/* <button onClick={() => }></button> */}
         </div>
     )
 }

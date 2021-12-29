@@ -1,29 +1,40 @@
 import React from 'react';
 import './Canvas.css';
 import {PrintMatrix} from '../PrintMatrix'
-import {Tools} from '../Tools';
 
 interface CanvasProps {
-    currentPencilColor: string;
+    currentPencilColor: number | string;
+    options: {
+        bordersVisibility: boolean;
+    }
 }
 
-const createMatrix = (size:number):string[][] => [...Array(size)].map(() => [...Array(size)].map(() => 'hsl(0, 0%, 100%)'))
+const createMatrix = (size:number):(string|number)[][] => [...Array(size)].map(() => [...Array(size)].map(() => 'white'))
 
-export const Canvas = ({currentPencilColor}:CanvasProps) => {
+export const Canvas = ({currentPencilColor, options}:CanvasProps) => {
     const [size, setSize] = React.useState<number>(10);
-    const [matrix, setMatrix] = React.useState<string[][]>(() => createMatrix(size));
-
+    const [matrix, setMatrix] = React.useState<(string|number)[][]>(() => createMatrix(size));
+    
+ 
     React.useEffect(() => {
         setMatrix(createMatrix(size));
-    }, [size])
+    }, [size]);
 
-    const paintElement = (event:React.SyntheticEvent) => {
-        const div = event.currentTarget as HTMLDivElement;
-        div.style.background = currentPencilColor;
+    const paintElement = ({x,y}:{x:number, y:number}) => {
+        setMatrix(prev => {
+            const _prev = [...Array(size)].map((_, index) => [...prev[index]]);
+            _prev[x][y] = currentPencilColor;
+            return _prev;
+        })
+     }
+
+    const clearCanvas = () => {
+        setMatrix(createMatrix(size))
     }
 
     return (
         <div className="Canvas">
+            <button onClick={() => clearCanvas()}>clear</button>
             <input type="range" name="matrix_size" id="matrix_size" max={30} min={5} onMouseUp={(e) => {
                 const _size = Number(e.currentTarget.value);
                 _size !== size && setSize(_size);
@@ -31,10 +42,7 @@ export const Canvas = ({currentPencilColor}:CanvasProps) => {
                 const _size = Number(e.currentTarget.value);
                 _size !== size && setSize(_size);
             }} />
-            {/* <Tools>
-
-            </Tools> */}
-            <PrintMatrix matrix={matrix} paintElement={paintElement} />
+            <PrintMatrix matrix={matrix} bordersVisibility={options.bordersVisibility} paintElement={paintElement} />
         </div>
     )
 }

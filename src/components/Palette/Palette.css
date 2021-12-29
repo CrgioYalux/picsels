@@ -10,7 +10,7 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    background-color: var(--secondary-black);    
+    background-color: transparent;
     border-radius: 9px;
     overflow: hidden;
 }

@@ -8,3 +8,43 @@
     align-items: center;
     justify-content: center;
 }
+
+.color-0 {background-color: hsl(0, 50%, 50%);}
+.color-10 {background-color: hsl(10, 50%, 50%);}
+.color-20 {background-color: hsl(20, 50%, 50%);}
+.color-30 {background-color: hsl(30, 50%, 50%);}
+.color-40 {background-color: hsl(40, 50%, 50%);}
+.color-50 {background-color: hsl(50, 50%, 50%);}
+.color-60 {background-color: hsl(60, 50%, 50%);}
+.color-70 {background-color: hsl(70, 50%, 50%);}
+.color-80 {background-color: hsl(80, 50%, 50%);}
+.color-90 {background-color: hsl(90, 50%, 50%);}
+.color-100 {background-color: hsl(100, 50%, 50%);}
+.color-110 {background-color: hsl(110, 50%, 50%);}
+.color-120 {background-color: hsl(120, 50%, 50%);}
+.color-130 {background-color: hsl(130, 50%, 50%);}
+.color-140 {background-color: hsl(140, 50%, 50%);}
+.color-150 {background-color: hsl(150, 50%, 50%);}
+.color-160 {background-color: hsl(160, 50%, 50%);}
+.color-170 {background-color: hsl(170, 50%, 50%);}
+.color-180 {background-color: hsl(180, 50%, 50%);}
+.color-190 {background-color: hsl(190, 50%, 50%);}
+.color-200 {background-color: hsl(200, 50%, 50%);}
+.color-210 {background-color: hsl(210, 50%, 50%);}
+.color-220 {background-color: hsl(220, 50%, 50%);}
+.color-230 {background-color: hsl(230, 50%, 50%);}
+.color-240 {background-color: hsl(240, 50%, 50%);}
+.color-250 {background-color: hsl(250, 50%, 50%);}
+.color-260 {background-color: hsl(260, 50%, 50%);}
+.color-270 {background-color: hsl(270, 50%, 50%);}
+.color-280 {background-color: hsl(280, 50%, 50%);}
+.color-290 {background-color: hsl(290, 50%, 50%);}
+.color-300 {background-color: hsl(300, 50%, 50%);}
+.color-310 {background-color: hsl(310, 50%, 50%);}
+.color-320 {background-color: hsl(320, 50%, 50%);}
+.color-330 {background-color: hsl(330, 50%, 50%);}
+.color-340 {background-color: hsl(340, 50%, 50%);}
+.color-350 {background-color: hsl(350, 50%, 50%);}
+.color-360 {background-color: hsl(360, 50%, 50%);}
+.color-black {background-color: hsl(0, 0%, 0%);}
+.color-white {background-color: hsl(0, 0%, 100%);}

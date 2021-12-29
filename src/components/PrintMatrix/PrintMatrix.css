@@ -1,6 +1,7 @@
 .Matrix {
     width: 100%;
     aspect-ratio: 1;
+    outline: 1px solid var(--primary);
 }
 
 .Matrix__row {
@@ -13,6 +14,14 @@
 .Matrix__row > div {
     flex: 1 1 auto;
     aspect-ratio: 1;
-    outline: 1px solid var(--primary);
     cursor: pointer;
 }
+
+.Matrix__row > div.--borders-visible {
+    outline: 1px solid var(--primary);
+}
+
+.Matrix__row > div.--borders-not-visible {
+    outline: 0;
+}
+

@@ -1,20 +1,26 @@
 import React from 'react';
 import './PrintMatrix.css';
 
+type Coor = {
+    x: number,
+    y: number
+}
 interface MatrixProps {
-    matrix: string[][];
-    paintElement: (event:React.SyntheticEvent) => void;
+    matrix: (string|number)[][];
+    paintElement: (coor:Coor) => void;
+    bordersVisibility: boolean;
 }
 
-export const PrintMatrix = ({matrix, paintElement}:MatrixProps) => {
+export const PrintMatrix = ({matrix, paintElement, bordersVisibility}:MatrixProps) => {
+    const showBorder = bordersVisibility ? '--borders-visible' : '--borders-not-visible';
     return (
         <div className="Matrix">
             {
                 matrix.map((row, x) => (
                     <div key={`row_${x}`} className="Matrix__row">
                     {
-                        row.map((background, y) => (
-                            <div onClick={paintElement} key={`el_${x}/${y}`} style={{background}}></div>
+                        row.map((hue, y) => (
+                            <div className={showBorder + ` color-${hue}`} onClick={() => paintElement({x, y})} key={`el_${x}/${y}`}></div>
                         ))
                     }
                     </div>
