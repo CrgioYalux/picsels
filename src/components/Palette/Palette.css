@@ -19,12 +19,14 @@
     flex: 0 1 11.11%;
     cursor: pointer;
     aspect-ratio: 1;
+    outline-offset: -8px;
 }
 
 .Palette__color-option--selected {
     width: 90%;
-    height: 35px;
+    height: 25px;
     margin: auto;
     margin-top: 5px;
     border-radius: 999px;
+    outline: 1px solid var(--secondary-black);
 }
