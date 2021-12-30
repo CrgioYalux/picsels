@@ -1,0 +1,61 @@
+.DisplayOptions {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: clamp(.8rem, 4vw, 1rem);
+}
+
+.DisplayOptions > button {
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 99px;
+    cursor: pointer;
+    font-size: 1em;
+    padding: .3em .5em;
+    font-family: var(--font-roboto--ss);
+}
+
+.DisplayOptions > label {
+    flex: 1 1 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--primary);
+    border-radius: 99px;
+}
+
+.DisplayOptions > label > input {
+    width: 70%; 
+    margin-left: auto;
+}
+
+.DisplayOptions > label > strong {
+    flex: 0 0 auto;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1em;
+    aspect-ratio: 1;
+    font-family: var(--font-inter-ss);
+    background-color: var(--brand-light);
+    margin-left: auto;
+    color: var(--secondary);
+    border: 1px solid currentColor;
+}
+
+.DisplayOptions > label > strong.--canvas-size-not-changing {
+    opacity: 1;
+    transition: opacity .4s;
+}
+
+.DisplayOptions > label > strong.--canvas-size-changing {
+    opacity: .5;
+    transition: opacity .4s;
+}

@@ -6,10 +6,9 @@ const outline = "3px dashed hsla(0, 0%, 80%, .8)";
 interface PaletteProps {
     setPencilColor: React.Dispatch<React.SetStateAction<number | string>>;
     pencilColor: number | string;
-    children: React.ReactNode;
 }
 
-export const Palette = ({pencilColor, setPencilColor, children}:PaletteProps) => {
+export const Palette = ({pencilColor, setPencilColor}:PaletteProps) => {
     const lastSelectedDivRef = React.useRef<HTMLDivElement | null>(null);
 
     const selectColor = (e:React.SyntheticEvent, color:number|string) => {
@@ -39,9 +38,7 @@ export const Palette = ({pencilColor, setPencilColor, children}:PaletteProps) =>
             }
                 <div ref={lastSelectedDivRef} className="Palette__color-option" onClick={(e) => selectColor(e, 'black')} style={{background:'black', outline}}></div>
                 <div className="Palette__color-option" onClick={(e) => selectColor(e, 'white')} style={{background:'white'}}></div>
-                    {children}
                 </div>
-            <div className="Palette__color-option--selected" style={{background:pencilColor}}></div>
         </div>
     )
 }

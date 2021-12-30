@@ -1,7 +1,8 @@
 .Matrix {
     width: 100%;
+    max-width: 400px;
     aspect-ratio: 1;
-    outline: 1px solid var(--primary);
+    outline: 1px solid black;
 }
 
 .Matrix__row {

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -5,10 +8,21 @@
 }
 
 :root {
+  --brand-lighter: hsl(240, 50%, 60%);
+  --brand-light: hsl(240, 50%, 50%);
   --brand: hsl(240, 50%, 50%);
+  --brand-dark: hsl(240, 50%, 40%);
+  --brand-darker: hsl(240, 50%, 30%);
+
   --primary: hsl(0, 0%, 0%);
+  --primary-light: hsl(0, 0%, 20%);
+  --primary-lighter: hsl(0, 0%, 40%);
   --secondary: hsl(0, 0%, 100%);
-  --secondary-black: hsl(0, 0%, 80%);
+  --secondary-dark: hsl(0, 0%, 80%);
+  --secondary-darker: hsl(0, 0%, 60%);
+  
+  --font-inter-ss: 'Inter', sans-serif;
+  --font-roboto-ss: 'Roboto', sans-serif;
 }
 
 body {
