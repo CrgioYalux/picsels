@@ -24,3 +24,13 @@
 .Matrix__row > div.--borders-not-visible {
 	outline: 0;
 }
+
+.Matrix__row > div.--in-zoomed-area {
+	background-image: repeating-linear-gradient(
+		-45deg,
+		var(--brand-dark) 0px,
+		var(--brand-dark) 20%,
+		var(--brand-darker) 20%,
+		var(--brand-darker) 30%
+	);
+}
